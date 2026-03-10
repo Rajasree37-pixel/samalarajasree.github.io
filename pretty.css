@@ -814,28 +814,73 @@ nav {
 }
 
 @media (max-width: 768px) {
-    /* 1. Fix the Navbar */
-    nav {
-        padding: 0 20px; /* Reduces that 50px gap from desktop */
+    .navbar {
+        flex-direction: column; /* Stacks logo and links */
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        gap: 15px; /* Gives links breathing room */
+    }
+
+    .hero-name {
+        font-size: 32px !important; /* Prevents your name from wrapping weirdly */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 20px !important; /* Much tighter padding for phones */
+    }
+
+    /* Stack your experience and project cards */
+    .exp-wrapper, .project-card {
+        flex-direction: column !important;
+        align-items: flex-start;
     }
     
+    .code-window {
+        width: 100%; /* Ensures the "while(isSearching)" box fits the screen */
+        font-size: 12px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Shows the hamburger only on mobile */
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: var(--cyan-accent); /* Use your cyan color */
+        display: block;
+        transition: all 0.3s ease-in-out;
+    }
+
     .nav-links {
-        display: none; /* Usually, we hide links behind a burger menu on mobile */
+        position: absolute;
+        top: 70px;
+        left: -100%; /* Hidden off-screen to the left */
+        flex-direction: column;
+        background-color: #0a192f; /* Match your background */
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    /* 2. Fix the Hero Section (Samala Raja Sree) */
-    .hero-name {
-        font-size: 40px !important; /* Shrinks your name so it doesn't wrap weirdly */
+    .nav-links.active {
+        left: 0; /* Slides in when active */
     }
 
-    /* 3. Fix Section Padding */
-    section {
-        padding: 60px 20px !important; /* Reduces the 100px padding from desktop */
-    }
-
-    /* 4. Fix Flex Containers (Experience/Projects) */
-    .exp-wrapper, .project-card {
-        flex-direction: column; /* Stacks image/text vertically instead of side-by-side */
-        gap: 20px;
+    .nav-item {
+        margin: 25px 0;
     }
 }
