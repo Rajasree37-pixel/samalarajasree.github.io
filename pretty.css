@@ -16,6 +16,31 @@ body {
 
 /* --- Navbar Styling --- */
 
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: var(--cyan-accent); /* Use your signature cyan */
+}
+
+/* Media Query: Show the bars only on mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none; /* Hide the full links initially on mobile */
+    }
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -854,7 +879,7 @@ nav {
     /* Target the container holding your skill icons */
     .skill-stack { 
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+        grid-template-columns: repeat(1, 1fr); /* Creates 2 equal columns */
         gap: 15px; /* Spacing between the cards */
         justify-items: center;
     }
@@ -864,6 +889,7 @@ nav {
         width: 100% !important;
         max-width: 150px;
         margin: 0 auto;
+        padding: 15px;
     }
 }
 @media (max-width: 768px) {
@@ -888,4 +914,5 @@ nav {
         text-align: left;
     }
 }
+
 
