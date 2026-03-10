@@ -849,41 +849,7 @@ nav {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Shows the hamburger only on mobile */
-        cursor: pointer;
-    }
 
-    .menu-toggle .bar {
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        background-color: var(--cyan-accent); /* Use your cyan color */
-        display: block;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        left: -100%; /* Hidden off-screen to the left */
-        flex-direction: column;
-        background-color: #0a192f; /* Match your background */
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .nav-links.active {
-        left: 0; /* Slides in when active */
-    }
-
-    .nav-item {
-        margin: 25px 0;
-    }
-}
 @media (max-width: 768px) {
     /* Target the container holding your skill icons */
     .skill-stack { 
@@ -922,3 +888,4 @@ nav {
         text-align: left;
     }
 }
+
