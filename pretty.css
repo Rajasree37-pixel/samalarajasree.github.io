@@ -900,3 +900,25 @@ nav {
         margin: 0 auto;
     }
 }
+@media (max-width: 768px) {
+    /* 1. Ensure the project container takes full mobile width */
+    .project-container, .project-card {
+        width: 100% !important;
+        padding: 20px 10px;
+        margin: 0;
+        display: block; /* Forces stack instead of flex-side-by-side */
+    }
+
+    /* 2. Fix the project image if it's too big */
+    .project-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* 3. Ensure text inside the project card doesn't overflow */
+    .project-content {
+        padding: 0;
+        text-align: left;
+    }
+}
