@@ -884,3 +884,19 @@ nav {
         margin: 25px 0;
     }
 }
+@media (max-width: 768px) {
+    /* Target the container holding your skill icons */
+    .skill-stack { 
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+        gap: 15px; /* Spacing between the cards */
+        justify-items: center;
+    }
+
+    /* Ensure the individual cards don't have fixed widths */
+    .skill-card {
+        width: 100% !important;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+}
