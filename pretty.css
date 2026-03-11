@@ -1,3 +1,8 @@
+html, body {
+    overflow-x: hidden; /* Prevents the entire page from shaking or scrolling right */
+    width: 100%;
+    position: relative;
+}
 /* --- Global Styles --- */
 :root {
     --dark-bg: #0F172A;        /* Deep Navy from Modern Dark palette */
@@ -17,19 +22,20 @@ body {
 /* --- Navbar Styling --- */
 
 /* The container for the three lines */
-.menu-toggle {
-    display: none; /* Hidden on desktop */
-    cursor: pointer;
+/*.menu-toggle {
+    display: block;
+    z-index: 1001; /* Stay above everything 
+    padding: 10px; /* Make the hit-box bigger for thumbs 
 }
 
 .bar {
-    display: block;
     width: 25px;
     height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background: var(--cyan-accent); /* Use your signature cyan */
-}
+    background-color: var(--cyan-accent);
+    display: block;
+    margin: 5px 0;
+    transition: 0.3s;
+}*/
 
 /* Media Query: Show the bars only on mobile */
 @media screen and (max-width: 768px) {
@@ -843,6 +849,28 @@ nav {
 /* --- CONSOLIDATED MOBILE OVERRIDE --- */
 
 @media screen and (max-width: 768px) {
+    /* Force every container to stay inside the screen */
+    * {
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+
+    /* Fix the specific "Skinny" look and right-side gap */
+    .about-section, .experience-section, .projects-section, .skills-section {
+        padding: 40px 20px !important; 
+        width: 100% !important;
+        overflow: hidden; 
+    }
+
+    /* Fix the Hero Name which is likely pushing the width out */
+    .hero-name {
+        font-size: 2.2rem !important;
+        word-wrap: break-word;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
     /* 1. Fix Header Overlap & Alignment */
     nav {
         flex-direction: row;
@@ -980,4 +1008,5 @@ nav {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
 
