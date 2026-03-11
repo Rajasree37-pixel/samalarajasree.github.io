@@ -959,3 +959,25 @@ nav {
 #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
+
+@media screen and (max-width: 768px) {
+    /* Force sections to use the full width of the phone */
+    section, .about-section, .experience-section, .projects-section, .skills-section {
+        padding: 60px 5% !important; /* Reduce side margins from 10% to 5% */
+        width: 100% !important;
+        box-sizing: border-box; /* Ensures padding doesn't push width over 100% */
+    }
+
+    .about-content, .exp-wrapper, .project-card {
+        display: flex !important;
+        flex-direction: column !important; /* Stack everything vertically */
+        width: 100% !important;
+    }
+    
+    /* Fix the Skill Cards taking up full width */
+    .skills-grid {
+        width: 100% !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
