@@ -22,30 +22,26 @@ body {
 /* --- Navbar Styling --- */
 
 /* The container for the three lines */
-/*.menu-toggle {
-    display: block;
-    z-index: 1001; /* Stay above everything 
-    padding: 10px; /* Make the hit-box bigger for thumbs 
-}
 
-.bar {
+/* Media Query: Show the bars only on mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    z-index: 1001; 
+    padding: 10px;
+    }
+    
+    .nav-links {
+        display: none; /* Hide the full links initially on mobile */
+    }
+    .bar {
     width: 25px;
     height: 3px;
     background-color: var(--cyan-accent);
     display: block;
     margin: 5px 0;
     transition: 0.3s;
-}*/
-
-/* Media Query: Show the bars only on mobile */
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    
-    .nav-links {
-        display: none; /* Hide the full links initially on mobile */
-    }
+}
 }
 
 nav {
@@ -1008,5 +1004,6 @@ nav {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
 
 
