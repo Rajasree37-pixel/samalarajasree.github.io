@@ -1,8 +1,4 @@
-html, body {
-    overflow-x: hidden; /* Prevents the entire page from shaking or scrolling right */
-    width: 100%;
-    position: relative;
-}
+
 /* --- Global Styles --- */
 :root {
     --dark-bg: #0F172A;        /* Deep Navy from Modern Dark palette */
@@ -200,6 +196,7 @@ nav {
     border-radius: 12px;
     padding: 1.5rem;
     max-width: 420px;
+    height: 170px;
     margin: 0 auto;
     text-align: left;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
@@ -1004,6 +1001,7 @@ nav {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
+
 
 
 
